@@ -1,3 +1,0 @@
-from mathx.geometry.type.metric.euclidean.shape.type.point.two_dimension.point import Point as TwoDimensionPoint
-
-class Point(TwoDimensionPoint): ...
