@@ -2,8 +2,8 @@ from nd_math.probability.statistic.population.kind.countable.finite.member_menti
 import numpy as np
 from nd_math.number.kind.real.interval.unit.open_unit_interval import OpenUnitInterval
 
-from nd_math.probability.statistic.population.sampling.sampler.kind.countable.finite.members_mentioned.numbered.random.random import Random as RandomSampler
-from nd_math.probability.statistic.population.sampling.sampler.size.kind.ratio import Ratio
+from nd_math.probability.statistic.population.sampling.kind.countable.finite.members_mentioned.numbered.random.random import Random as RandomSampler
+from nd_math.probability.statistic.population.sampling.size.kind.ratio import Ratio
 
 
 class TestRandom:

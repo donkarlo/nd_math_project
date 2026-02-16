@@ -1,6 +1,6 @@
 import numpy as np
 
-from nd_math.probability.statistic.population.sampling.sampler.kind.countable.finite.members_mentioned.numbered.sequence.sliding_window.sliding_window import  SlidingWindow
+from nd_math.probability.statistic.population.sampling.kind.countable.finite.members_mentioned.numbered.sequence.sliding_window.sliding_window import  SlidingWindow
 
 
 class Generator:
@@ -31,7 +31,7 @@ class Generator:
     def _build_input_outputs(self) -> None:
         input_length = self._sliding_window.get_input_length()
         output_length = self._sliding_window.get_output_length()
-        step = self._sliding_window.get_step()
+        step = self._sliding_window.get_overlap_size()
 
         total_length = input_length + output_length
         time_length = self._np_array.shape[0]

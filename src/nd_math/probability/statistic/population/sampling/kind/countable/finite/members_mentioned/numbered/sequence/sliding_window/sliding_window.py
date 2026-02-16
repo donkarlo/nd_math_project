@@ -17,5 +17,5 @@ class SlidingWindow:
     def get_output_length(self) -> int:
         return self._output_length
 
-    def get_step(self) -> int:
+    def get_overlap_size(self) -> int:
         return self._overlap_size

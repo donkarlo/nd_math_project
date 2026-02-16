@@ -1,15 +1,20 @@
+from typing import Iterable
+
+import numpy as np
+
 from nd_math.probability.statistic.population.kind.countable.finite.member_mentioned.numbered.numbered import \
     Numbered as NumberedPopulation
-from nd_math.probability.statistic.population.sampling.sampler.kind.countable.finite.members_mentioned.numbered.numbered import Numbered as NumberedSampler
-from nd_math.probability.statistic.population.sampling.sampler.sampler import Sampler
-import numpy as np
-from nd_math.probability.statistic.population.sampling.sampler.size.size import Size
-from typing import Iterable
+from nd_math.probability.statistic.population.sampling.kind.countable.finite.members_mentioned.numbered.numbered import \
+    Numbered as NumberedSampler
+from nd_math.probability.statistic.population.sampling.sampling import Sampling
+from nd_math.probability.statistic.population.sampling.size.size import Size
+
 
 class Random(NumberedSampler):
     """
     Simplest random number taking
     """
+
     def __init__(self, population: NumberedPopulation, size: Size):
         """
         This sampler doesnt shuffle and
@@ -19,8 +24,7 @@ class Random(NumberedSampler):
         Returns:
 
         """
-        Sampler.__init__(self, population, size)
-
+        Sampling.__init__(self, population, size)
 
     def _build_samples(self) -> None:
         sample_size_value = self.get_size().get_value()

@@ -2,12 +2,12 @@ from nd_math.probability.statistic.population.population import Population
 from abc import ABC, abstractmethod
 from typing import Iterable
 
-from nd_math.probability.statistic.population.sampling.sampler.size.size import Size
+from nd_math.probability.statistic.population.sampling.size.size import Size
 
 
-class Sampler(ABC):
+class Sampling(ABC):
     """
-    Sampler is a better name because it covers both Sample(Size), Sampler
+    Sampling is a better name because it covers both Sample(Size), Sampling
     """
     def __init__(self, population:Population, size:Size):
         self._population = population
@@ -24,7 +24,7 @@ class Sampler(ABC):
             self._build_samples()
         return self._samples
 
-    def get_population(self):
+    def get_population(self)->Population:
         return self._population
 
     def get_size(self)->Size:

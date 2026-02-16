@@ -8,7 +8,6 @@ class SubsetComplement(Partition):
     def __init__(self, subset: Set, complement: Set):
         self._subset = subset
         self._complement = complement
-        Partition.__init__(self, [self._subset, self._complement])
 
     def get_complement(self):
         return self._complement

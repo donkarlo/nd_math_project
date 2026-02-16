@@ -1,5 +1,5 @@
 from nd_math.probability.statistic.population.population import Population
-from typing import Iterable
+from collections.abc import Iterable
 
 class Countable(Population):
     def __init__(self, members: Iterable):
