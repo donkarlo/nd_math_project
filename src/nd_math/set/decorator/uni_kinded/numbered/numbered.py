@@ -1,5 +1,5 @@
 class Numbered:
     """
-    Is only value of a ny kind
+    Is only value of a ny kinds
     """
     pass

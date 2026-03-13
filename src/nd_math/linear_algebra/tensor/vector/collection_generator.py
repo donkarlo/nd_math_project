@@ -21,7 +21,7 @@ class CollectionGenerator(Generic[VecType]):
             if not line:
                 continue
             comps = [float(c) for c in line.split(component_sep) if c]
-            # kind: ignore[arg-kind]
+            # kinds: ignore[arg-kinds]
             obj = factory(comps) if callable(factory) else cls(comps)
             vecs.append(obj)
         return vecs
