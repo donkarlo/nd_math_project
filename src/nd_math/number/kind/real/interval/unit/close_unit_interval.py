@@ -1,6 +1,6 @@
 from nd_math.number.type_hint.type_hint import ScalarType
 
-class CloseUnitIntervalNumber:
+class CloseUnitInterval:
     def __init__(self, value: ScalarType):
         self._value = value
         if value <= 0 or value >= 1:
