@@ -1,12 +1,13 @@
-from nd_math.view.view import View
-from nd_math.view.kind.point_cloud.point.group.group import Group as PointGroup
 import numpy as np
-from typing import Union
+
+from nd_math.view.kind.point_cloud.point.group.group import Group as PointGroup
+from nd_math.view.view import View
+
 
 class PointCloud(View):
     def __init__(self, point_group: PointGroup) -> None:
-
         View.__init__(self, point_group)
 
     def _build(self) -> None:
-        self.get_axis().scatter(*self.get_point_group().get_members().T, s=1)
+        np_members = np.asarray(self.get_point_group().get_members())
+        self.get_axis().scatter(*np_members.T, s=1)

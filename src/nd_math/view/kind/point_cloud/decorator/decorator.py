@@ -6,7 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 from nd_math.view.interface import Interface
 from nd_math.view.kind.point_cloud.point.group.group import Group
-from nd_utility.oop.design_pattern.structural.decorator.decorator import Decorator as BaseDecorator
+from nd_utility.oop.design_pattern.structural.decoration.decorator import Decorator as BaseDecorator
 
 
 class Decorator(Interface, BaseDecorator):
