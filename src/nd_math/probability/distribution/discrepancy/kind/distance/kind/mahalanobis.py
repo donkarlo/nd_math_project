@@ -9,8 +9,8 @@ class Mahalanobis(Distance):
     def get_distance_value(self, population_one: np.ndarray, population_two: np.ndarray) -> float:
         """
         - if you give two scalars then it will give the absolute value
-        - if you give two bvectors, it will give the euclidean distance
-        - population one and two must finit data points
+        - if you give two vectors, it will give the Euclidean distance
+        - population one and two must be finit data points
         Args:
             population_one:
             population_two:
