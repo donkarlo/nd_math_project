@@ -1,5 +1,7 @@
 import numpy as np
 
+from nd_math.probability.distribution.discrepancy.kind.distance.distance import Distance
+
 
 class Gaussian(Distance):
     def __init__(self, numerical_tolerance: float = 1e-10):
