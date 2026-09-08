@@ -1,6 +1,6 @@
 import numpy as np
 
-from nd_sociomind.experiment.parts.oldest.uav1_300k_normal_time_position_modality import \
+from nd_sociomind.experiment.part.oldest.uav1_300k_normal_time_position_modality import \
     Uav1300kNormalTimePositionModality
 from period_limited_variable_length_motif_discoverer import PeriodLimitedVariableLengthMotifDiscoverer
 

@@ -20,7 +20,7 @@ configure_matplotlib_backend()
 
 import matplotlib.pyplot as plt
 
-from nd_sociomind.experiment.parts.oldest.uav1_300k_normal_time_position_modality import \
+from nd_sociomind.experiment.part.oldest.uav1_300k_normal_time_position_modality import \
     Uav1300kNormalTimePositionModality
 
 
