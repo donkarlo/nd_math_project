@@ -26,6 +26,7 @@ class Gaussian(Distance):
         return float(np.sqrt(distance_squared))
 
     def calculate_direction(self, first_mean: np.ndarray, second_mean: np.ndarray) -> np.ndarray:
+       ""This method is to calculat direction""""
         first_mean = self._convert_to_vector(first_mean)
         second_mean = self._convert_to_vector(second_mean)
 
@@ -51,6 +52,28 @@ class Gaussian(Distance):
             covariance_term = 0.0
 
         return float(covariance_term)
+        
+    def calculate_distance_vector(self, first_mean: np.ndarray, first_covariance: np.ndarray, second_mean: np.ndarray, second_covariance: np.ndarray) -> np.ndarray:
+
+    first_mean = self._convert_to_vector(first_mean)
+    second_mean = self._convert_to_vector(second_mean)
+
+    direction = self.calculate_direction(first_mean, second_mean)
+    direction_norm = float(np.linalg.norm(direction))
+
+    distance = self.calculate_distance(first_mean, first_covariance, second_mean, second_covariance)
+
+    if direction_norm < self._numerical_tolerance:
+        if distance < self._numerical_tolerance:
+            return np.zeros_like(direction)
+
+        raise ValueError("A Wasserstein distance vector cannot be directed by the means when the two means are identical.")
+
+    unit_direction = direction / direction_norm
+
+    distance_vector = distance * unit_direction
+
+    return distance_vector
 
     def _calculate_symmetric_matrix_square_root(self, matrix: np.ndarray) -> np.ndarray:
         eigenvalues, eigenvectors = np.linalg.eigh(matrix)
