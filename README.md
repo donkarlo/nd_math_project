@@ -38,11 +38,3 @@ python -m pip install -e .
 There is currently no comprehensive top-level test suite. Several test/example-like modules are distributed inside the package tree. Static syntax issues should be repaired before treating package-wide test discovery as reliable. The manifest declares ruamel.yaml, but functionality in different modules also imports NumPy, Matplotlib, nd_utility, nd_physics, and additional research packages that require separate installation or source-path configuration.
 
 The pyproject.toml script named robotix refers to nd_math.__main__:main, but src/nd_math/__main__.py is empty. It is not an operational CLI.
-
-## Known limitations
-
-- Five tracked Python modules failed static syntax parsing in the reviewed checkout, including the Gaussian Wasserstein distance implementation.
-- Multiple packages provide abstraction/class skeletons rather than usable methods.
-- Some legacy imports use older package names; import paths are not fully normalized.
-- No end-to-end verification of every mathematical subsystem is implied.
-- The root LICENSE file is empty; the licensing status is not specified there.
